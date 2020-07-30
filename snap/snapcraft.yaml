@@ -1,0 +1,28 @@
+name: archimate
+base: core18 # the base snap is the execution environment for this snap
+summary: Archi – Open Source ArchiMate Modelling
+description: |
+  The Archi® modelling toolkit is targeted toward all levels of Enterprise Architects and Modellers. It provides a low cost to entry solution to users who may be making their first steps in the ArchiMate modelling language, or who are looking for an open source, cross-platform ArchiMate modelling tool for their company or institution and wish to engage with the language within a TOGAF® or other Enterprise Architecture framework.
+
+  The ArchiMate® modelling language is an open and independent Enterprise Architecture standard that supports the description, analysis and visualisation of architecture within and across business domains. ArchiMate is one of the open standards hosted by The Open Group® and is fully aligned with TOGAF®. ArchiMate aids stakeholders in assessing the impact of design choices and changes.
+
+  Archi® fulfils the needs of most Enterprise Architects and associated stakeholders, and has been designed to elegantly provide the main features required for ArchiMate modelling and is used globally by banks, insurance companies, industry, EA consultants, training organisations, universities, and students. It is the world’s most popular ArchiMate modelling tool and is downloaded on average about 5,000 times every month.
+
+grade: stable
+confinement: strict
+version: "4.7.1"
+
+parts:
+  archimate:
+    plugin: dump
+    source: https://www.archimatetool.com/downloads/71cb57de/Archi-Linux64-4.7.1.tgz
+
+
+apps:
+  archimate:
+    command: Archi
+    plugs:
+      - home
+      - x11
+    extensions:
+      - gnome-3-28
