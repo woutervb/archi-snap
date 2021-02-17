@@ -10,12 +10,12 @@ description: |
 
 grade: stable
 confinement: strict
-version: "4.7.1"
+version: "4.8.1"
 
 parts:
   archimate:
     plugin: dump
-    source: https://www.archimatetool.com/downloads/71cb57de/Archi-Linux64-4.7.1.tgz
+    source: https://www.archimatetool.com/downloads/a481/Archi-Linux64-4.8.1.tgz
 
 
 apps:
@@ -25,4 +25,4 @@ apps:
       - home
       - x11
     extensions:
-      - gnome-3-28
+      - gnome-3-34
